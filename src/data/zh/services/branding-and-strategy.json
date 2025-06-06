@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "品牌战略",
+        "description": "我们与您密切合作，了解您的品牌愿景、使命和目标受众。然后，我们量身定制符合您的业务目标和宗旨的全面品牌战略。该战略将涵盖您的品牌定位、信息传递和视觉识别。"
+    },
+    {
+        "icon": "/images/services/icon-brand-marketing.svg",
+        "serviceTitle": "品牌营销",
+        "description": "我们通过创建具有凝聚力和令人难忘的品牌形象，让您的品牌战略焕发生机。这包括开发您的品牌名称、徽标、调色板、字体和其他视觉元素。"
+    },
+    {
+        "icon": "/images/services/icon-brand-development.svg",
+        "serviceTitle": "品牌开发",
+        "description": "我们通过创建具有凝聚力和令人难忘的品牌形象，让您的品牌战略焕发生机。这包括开发您的品牌名称、徽标、调色板、字体和其他视觉元素。"
+    }
+]

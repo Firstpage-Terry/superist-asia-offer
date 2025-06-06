@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "Content Strategy",
+        "description": "We work closely with you to understand your brand's vision, mission, and target audience to develop comprehensive content strategies that aligns with your goal and objectives."
+    },
+    {
+        "icon": "/images/services/icon-creative-development.svg",
+        "serviceTitle": "Creative Development",
+        "description": "We provide high quality copy, visual, and multimedia that resonates with your audience in various of platform and channels."
+    },
+    {
+        "icon": "/images/services/icon-brand-storytelling.svg",
+        "serviceTitle": "Brand Storytelling",
+        "description": "Connection with your audience through compelling brand stories infused with emotions is important. We provide you with combination of strategic messaging and creative execution to ensure that your brand narrative is not only engaging but also memorable and impactful."
+    }
+]

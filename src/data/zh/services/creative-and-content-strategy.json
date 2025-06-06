@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "内容策略",
+        "description": "我们与您密切合作，了解您品牌的愿景、使命和目标受众，制定符合您的目标和宗旨的全面内容策略。"
+    },
+    {
+        "icon": "/images/services/icon-creative-development.svg",
+        "serviceTitle": "创意开发",
+        "description": "我们提供高质量的文案、视觉效果和多媒体，在各种平台和渠道上引起您的受众的共鸣。"
+    },
+    {
+        "icon": "/images/services/icon-brand-storytelling.svg",
+        "serviceTitle": "品牌故事",
+        "description": "通过引人入胜、充满情感的品牌故事与受众建立联系非常重要。我们为您提供战略信息传递和创意执行相结合的服务，确保您的品牌故事不仅引人入胜，而且令人难忘、富有影响力。"
+    }
+]

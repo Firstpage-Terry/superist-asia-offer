@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "/images/services/icon-gs-strategy.webp",
+        "serviceTitle": "战略规划",
+        "description": "我们首先根据您的业务目标和受众需求制定全面的电子邮件营销策略。这确保每个活动都与您的整体营销目标保持一致。"
+    },
+    {
+        "icon": "/images/services/icon-gs-audience.webp",
+        "serviceTitle": "受众细分",
+        "description": "了解您的受众至关重要。我们的团队会专业地细分您的电子邮件列表，提供与不同客户群体产生共鸣的个性化内容，从而提升互动和转化率。"
+    },
+    {
+        "icon": "/images/services/icon-gs-copywriting.webp",
+        "serviceTitle": "个性化文案写作",
+        "description": "电子邮件活动的成功取决于其内容。我们经验丰富的文案撰写者将为您定制个性化文案，吸引注意力并鼓励行动，确保您的信息在拥挤的收件箱中脱颖而出。"
+    },
+    {
+        "icon": "/images/services/icon-gs-design.webp",
+        "serviceTitle": "理想设计",
+        "description": "我们相信美学很重要。我们的设计团队精心打造视觉吸引力强的电子邮件，这些邮件不仅外观精美，还能提升用户体验并促进互动。"
+    },
+    {
+        "icon": "/images/services/icon-gs-synchronisation.webp",
+        "serviceTitle": "同步化",
+        "description": "在电子邮件营销中，时机至关重要。我们通过数据分析确定发送电子邮件的最佳时间，以最大化打开率和互动率。"
+    }
+]

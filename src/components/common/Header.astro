@@ -21,70 +21,6 @@ const currentLang = Astro.url.pathname.split('/')[1];
             <Image src={menuIcon} alt="Mobile menu" width="24"/>
         </a>
     </div>
-    <div class="hidden lg:flex container text-white flex-row justify-end items-center lg:max-w-[1180px] xl:max-w-[1440px]">
-        <ul class="main-nav inline-block list-none text-[15px]">
-            <li class="inline-block mx-[15px] py-[28px]">
-                <a class="px-[10px] hover:text-blue-main" href={`/${currentLang}/why-us`}>
-                    {(currentLang === "en")?"Why Us":"为什么选择我们"}
-                </a>
-            </li>
-            <li class="group inline-block mx-[15px] py-[28px] relative">
-                <span class="px-[10px] cursor-pointer font-bold">
-                    {(currentLang === "en")?"China Solutions":"中国解决方案"}
-                </span>
-                <ul class="main-sub-menu invisible list-none text-center w-[182px]
-                    bg-black-bg
-                    absolute
-                    top-[85px]
-                    left-1/2 
-                    -translate-x-1/2
-                    opacity-0
-                    transition-all
-                    group-hover:visible
-                    group-hover:opacity-100
-                    group-hover:top-[75px]
-                    ">
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/branding-and-strategy`}>{(currentLang === "en")?"Branding & Strategy":"品牌与战略"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/media-buying-and-advertising`}>{(currentLang === "en")?"Media Buying & Advertising":"媒体购买与广告"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/creative-and-content-strategy`}>{(currentLang === "en")?"Creative & Content Strategy":"创意与内容策略"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/kol-management`}>{(currentLang === "en")?"KOL Management":"KOL管理"}</a></li>
-                </ul>
-            </li>
-            <li class="group inline-block mx-[15px] py-[28px] relative">
-                <span class="px-[10px] cursor-pointer font-bold">
-                    {(currentLang === "en")?"Global Solutions":"全球解决方案"}
-                </span>
-                <ul class="main-sub-menu invisible list-none text-center w-[182px]
-                    bg-black-bg
-                    absolute
-                    top-[85px]
-                    left-1/2 
-                    -translate-x-1/2
-                    opacity-0
-                    transition-all
-                    group-hover:visible
-                    group-hover:opacity-100
-                    group-hover:top-[75px]
-                    ">
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/seo`}>{(currentLang === "en")?"SEO":"搜索引擎优化"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/advertising`}>{(currentLang === "en")?"Advertising":"广告"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/content-and-visual-production`}>{(currentLang === "en")?"Content & Visual Production":"内容与视觉制作"}</a></li>
-                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/email-marketing`}>{(currentLang === "en")?"Email Marketing":"邮件营销"}</a></li>
-                </ul>
-            </li>
-            <!-- <li class="inline-block mx-[15px] py-[28px]">
-                <a class="px-[10px] hover:text-blue-main" href={`/${currentLang}/contact`}>
-                    {(currentLang === "en")?"Contact":"联系"}
-                </a>
-            </li> -->
-        </ul>
-        <CtaButton addClass="inline-block uppercase" hasArrow={false}>
-            {(currentLang === "en")?"Contact Us":"联系我们"}
-        </CtaButton>
-        <!-- <a class="cta-btn" href="#">
-            <Image class="block lg:hidden" src={headerPhone} alt="Contact Us" width="28"/>
-        </a> -->
-    </div>
 </header>
 <div id="mobile-menu" class="hidden fixed z-[9999] top-0 left-0 bottom-0 right-0">
     <div class="relative z-[9] overflow-y-scroll left-0 top-0 bottom-0 h-full bg-black w-9/12">
@@ -155,10 +91,10 @@ const currentLang = Astro.url.pathname.split('/')[1];
             @apply
             lg:top-[-75px];
 
-            .header-logo {
-                @apply
-                lg:top-[75px];
-            }
+            // .header-logo {
+            //     @apply
+            //     lg:top-[75px];
+            // }
         }
     }
 

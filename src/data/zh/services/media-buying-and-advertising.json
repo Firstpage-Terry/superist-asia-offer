@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "广告策略",
+        "description": "我们与您携手合作，满足您的需求和愿望，帮助您根据目标、目标受众和市场动态制定全面的广告策略。"
+    },
+    {
+        "icon": "/images/services/icon-media-panning-buying.svg",
+        "serviceTitle": "媒体规划与购买",
+        "description": "我们通过为您的广告方案确定最有效的媒体渠道，让您的广告策略成为现实。"
+    },
+    {
+        "icon": "/images/services/icon-campaign-management.svg",
+        "serviceTitle": "广告方案管理",
+        "description": "我们的团队负责从头到尾管理您的广告方案，持续监控效果并根据数据进行调整以优化结果。我们提供详细的分析和报告，以便您随时了解您的广告方案。"
+    }
+]

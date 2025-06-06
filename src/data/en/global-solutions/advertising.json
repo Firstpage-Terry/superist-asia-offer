@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-gs-display-ad.svg",
+        "serviceTitle": "Search & Display Ads",
+        "description": "Search Ads, which are PPC ads shown on search engine results pages, and Display Ads, which are visual ads displayed across websites in networks like the Google Display Network."
+    },
+    {
+        "icon": "/images/services/icon-gs-social-media-ad.svg",
+        "serviceTitle": "Social Media Ads",
+        "description": "Highly targeted ad campaigns based on user behaviours and demographics data. We work on tailor-made strategies for the majority of platforms."
+    },
+    {
+        "icon": "/images/services/icon-gs-shopping-ad.svg",
+        "serviceTitle": "Product Listing Ads",
+        "description": "We help e-commerce clients produce top-notch advertisements on multiple e-commerce platforms."
+    }
+]

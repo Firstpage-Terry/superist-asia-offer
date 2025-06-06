@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "/images/services/icon-gs-strategy.webp",
+        "serviceTitle": "Strategic Planning",
+        "description": "We begin by developing a comprehensive email marketing strategy tailored to your business goals and audience needs. This ensures that every campaign aligns with your overall marketing objectives."
+    },
+    {
+        "icon": "/images/services/icon-gs-audience.webp",
+        "serviceTitle": "Audience Segmentation",
+        "description": "Understanding your audience is vital. Our team expertly segments your email lists to deliver personalised content that resonates with different customer groups, enhancing engagement and conversion rates."
+    },
+    {
+        "icon": "/images/services/icon-gs-copywriting.webp",
+        "serviceTitle": "Personalised Copywriting",
+        "description": "The success of an email campaign hinges on its content. Our skilled copywriters will personalise the copy to capture attention and encourage action, ensuring your message stands out in crowded inboxes."
+    },
+    {
+        "icon": "/images/services/icon-gs-design.webp",
+        "serviceTitle": "Desired Design",
+        "description": "We believe that aesthetics matter. Our design team crafts visually appealing emails that not only look great but also enhance user experience and drive engagement."
+    },
+    {
+        "icon": "/images/services/icon-gs-synchronisation.webp",
+        "serviceTitle": "Synchronisation",
+        "description": "Timing is everything in email marketing. We analyse data to determine the best times to send your emails, maximising open rates and engagement."
+    }
+]

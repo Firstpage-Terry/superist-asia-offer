@@ -1,0 +1,32 @@
+[
+    {
+        "icon": "/images/services/icon-gs-PPC-budget-forecast.svg",
+        "serviceTitle": "广告预算预测",
+        "description": "制定一个完善的预算预测可以让您自信地向前推进，避免采用无效的方法和不必要的开支。我们提供全面的解决方案，包括审计、识别并细分目标受众，制定广告预算。此外，我们还提供广告活动设置和创意的选项，并提出关键指标跟踪的建议。最终，您将获得一个现成的广告模型，帮助您实现预期目标。"
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-ads-implementation.svg",
+        "serviceTitle": "广告实施",
+        "description": "根据统计，每天有2亿用户访问至少一个Instagram商业账户。利用这一巨大潜力，通过精准定位、优质流量和不断增长的转化率，效果很快就会显现。我们可以帮助您启动高效的广告活动：进行分析，设置您的Ads Manager账户，准备广告活动的启动，并根据初步结果评估表现，优化广告设置。"
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-target.svg",
+        "serviceTitle": "受众定位",
+        "description": "在Instagram上进行精准定位的成功取决于目标受众的准确选择。在对受众进行细分和设置之前，我们会进行分析并创建目标受众画像。我们的重点是详细的定位，并结合多项参数来确保有效的定向投放。通过基于人口统计、兴趣、行为和其他相关因素仔细选择受众，我们可以优化您的广告活动，实现最大影响力和参与度。"
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-ads-management.svg",
+        "serviceTitle": "广告管理",
+        "description": "在Instagram推广方面，我们采用全面的广告管理方法，从创建Business Manager账户、配置广告账户，到分析已启动的广告活动并进行优化，全方位为您提供服务。"
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-landing-page.svg",
+        "serviceTitle": "着陆页创建",
+        "description": "通过利用Instagram的定位功能，可以增加在线商店、着陆页、博客或任何外部资源的流量。在配置广告时，我们会考虑目标受众的行为特征，创建相关的创意内容，评估重定向的着陆页质量，并为再营销做好准备。"
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-analytics.svg",
+        "serviceTitle": "广告分析与优化",
+        "description": "我们的首要目标是实现您的关键绩效指标（KPI），同时优化预算支出。持续分析关键指标对于不断改进您的广告效果至关重要。我们监控广告活动的表现，按需调整策略，并提供全面的报告以确保您随时了解最新进展。"
+    }
+]

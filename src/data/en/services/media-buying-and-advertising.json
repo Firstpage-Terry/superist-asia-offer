@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "Advertising Strategy",
+        "description": "Work together side by side to cater your needs and wants, we help you to develop comprehensive advertising strategy based on the goal, target audience, and market dynamics."
+    },
+    {
+        "icon": "/images/services/icon-media-panning-buying.svg",
+        "serviceTitle": "Media Panning & Buying",
+        "description": "We bring your advertising strategy to life by identifying the most effective media channels for your campaign."
+    },
+    {
+        "icon": "/images/services/icon-campaign-management.svg",
+        "serviceTitle": "Campaign Management",
+        "description": "Our team manages your advertising campaigns from start to finish, continuously monitoring performance and making data-driven adjustments to optimise results. Detailed analytics and reporting are included so that you are informed about your campaign."
+    }
+]

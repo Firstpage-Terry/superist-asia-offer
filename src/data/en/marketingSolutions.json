@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-bradning-strategy.svg",
+        "title": "Branding & Strategy",
+        "desc": "Expand your business reach in China with our branding and strategy expertise.",
+        "link": "/en/china-solutions/branding-and-strategy"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-media-buying.svg",
+        "title": "Media Buying & Advertising",
+        "desc": "Dominate the Chinese market with our media buying and advertising strategies.",
+        "link": "/en/china-solutions/media-buying-and-advertising"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-content.svg",
+        "title": "Creative & Content Strategy",
+        "desc": "Engage and captivate Chinese audiences with our content strategy and creative services.",
+        "link": "/en/china-solutions/creative-and-content-strategy"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-kol.svg",
+        "title": "KOL Management",
+        "desc": "Connect with Chinese consumers through influential partnerships with our KOL services.",
+        "link": "/en/china-solutions/kol-management"
+    }
+]

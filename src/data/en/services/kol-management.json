@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "KOL Strategy",
+        "description": "We work with you to understand your needs for KOL strategy by aligning with your objective, target audience, and business goals. Our strategy will define the best KOLs to work with for your brand, ensuring impactful engagement plans."
+    },
+    {
+        "icon": "/images/services/icon-kol.svg",
+        "serviceTitle": "KOL Identification & Outreach",
+        "description": "We leverage our extensive network and market insights to identify the most relevant and influencial KOLs for your brand."
+    },
+    {
+        "icon": "/images/services/icon-campaign-execution.svg",
+        "serviceTitle": "Campaign Execution",
+        "description": "We bring your KOL strategy to life by managing and executing influencer campaigns, ensuring that all deliverables are met to your brand's standards and objective."
+    }
+]

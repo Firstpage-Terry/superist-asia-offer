@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-bradning-strategy.svg",
+        "title": "品牌策略",
+        "desc": "拓展您在中国的业务覆盖范围，我们提供品牌和策略专业知识。",
+        "link": "/zh/china-solutions/branding-and-strategy"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-media-buying.svg",
+        "title": "媒体购买与广告",
+        "desc": "利用我们的媒体购买和广告策略，在中国市场中占据主导地位。",
+        "link": "/zh/china-solutions/media-buying-and-advertising"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-content.svg",
+        "title": "创意与内容策略",
+        "desc": "通过我们的内容策略和创意服务，吸引并俘获中国观众的注意。",
+        "link": "/zh/china-solutions/creative-and-content-strategy"
+    },
+    {
+        "icon": "/images/comp-marketing-solutions/card-icon-kol.svg",
+        "title": "KOL 管理",
+        "desc": "通过我们的有影响力的 KOL 服务，与中国消费者建立联系。",
+        "link": "/zh/china-solutions/kol-management"
+    }
+]

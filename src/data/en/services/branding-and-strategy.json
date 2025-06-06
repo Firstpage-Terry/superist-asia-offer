@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "Branding Strategy",
+        "description": "We collaborate closely with you to understand your brand's vision, mission, and target audience. We then tailor make a comprehensive branding strategy that aligns with your business goals and objectives. This strategy will encompass your brand positioning, messaging, and visual identity."
+    },
+    {
+        "icon": "/images/services/icon-brand-marketing.svg",
+        "serviceTitle": "Brand Marketing",
+        "description": "We bring your brand strategy to life by creating a cohesive and memorable brand identity. This includes developing your brand name, logo, color palette, typography, and other visual elements."
+    },
+    {
+        "icon": "/images/services/icon-brand-development.svg",
+        "serviceTitle": "Brand Development",
+        "description": "We bring your brand strategy to life by creating a cohesive and memorable brand identity. This includes developing your brand name, logo, color palette, typography, and other visual elements."
+    }
+]

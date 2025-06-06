@@ -1,0 +1,32 @@
+[
+    {
+        "icon": "/images/services/icon-gs-PPC-budget-forecast.svg",
+        "serviceTitle": "Ad Budget Forecast",
+        "description": "Having a well-developed forecast allows you to confidently move forward, eliminates the use of ineffective approaches, and unnecessary expenses. We provide a comprehensive solution that includes auditing, identifying and segmenting the target audience, and forming an advertising budget. We also offer options for campaign settings and creatives, as well as provide recommendations for tracking key metrics. As a result, you will receive a ready-made advertising model that enables you to achieve your desired goals."
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-ads-implementation.svg",
+        "serviceTitle": "Ads Implementation",
+        "description": "According to statistics, 200 million users visit at least one Instagram business profile every day. With such potential, when properly targeting, quality traffic, and a growing conversion rate, the results won’t take long to appear. We can help you launch highly effective advertising: conduct analysis, set up your Ads Manager account, prepare campaigns for launch, and evaluate performance and optimize settings based on the initial results."
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-target.svg",
+        "serviceTitle": "Audience Targeting",
+        "description": "The success of targeting on Instagram depends on the accuracy of selecting the target audience. Before segmenting and setting up the audience for displaying ads, we conduct analysis and create a portrait of the target audience. Our priority is detailed targeting and a combination of parameters to ensure effective targeting. By carefully selecting the audience based on demographics, interests, behaviors, and other relevant factors, we can optimize your campaigns for maximum impact and engagement."
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-ads-management.svg",
+        "serviceTitle": "Ads Management",
+        "description": "When it comes to promotion on Instagram, we employ a comprehensive advertising approach that encompasses everything from creating an account in Business Manager and configuring the advertising account to analyzing launched campaigns and optimizing them."
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-landing-page.svg",
+        "serviceTitle": "Landing Page Creations",
+        "description": "By utilizing Instagram’s targeting capabilities, it is possible to increase the traffic to an online store, landing page, blog, or any external resource. When configuring the advertising, we take into account the behavioral characteristics of the target audience, create relevant creatives, evaluate the quality of the designated landing page for redirection, and prepare it for retargeting."
+    },
+    {
+        "icon": "/images/services/icon-gs-PPC-analytics.svg",
+        "serviceTitle": "Ads Analytics & Optimization",
+        "description": "Our prime objective is to hit your KPIs while optimizing budget spend. Persistent analysis of key metrics is vital for the continuous improvement of your advertising efforts. We monitor campaign performance, adjust strategies as needed, and provide comprehensive reports to keep you informed."
+    }
+]

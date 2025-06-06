@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-gs-display-ad.svg",
+        "serviceTitle": "搜索及展示广告",
+        "description": "是最常见的PPC形式。搜索广告一般出现在搜索引擎结果页面，通过关键词定位触及相关受众，比较注重精准定位；展示广告则在展示网路网站上显示，以图片、视频等吸引注意，侧重品牌曝光，复盖更广泛的潜在客户。"
+    },
+    {
+        "icon": "/images/services/icon-gs-social-media-ad.svg",
+        "serviceTitle": "社交媒体广告",
+        "description": "基于用户行为和人口统计数据的高度定向广告活动。我们为大多数平台量身定制策略。"
+    },
+    {
+        "icon": "/images/services/icon-gs-shopping-ad.svg",
+        "serviceTitle": "产品列表广告",
+        "description": "我们帮助电商客户在多个电商平台上制作顶级广告。"
+    }
+]

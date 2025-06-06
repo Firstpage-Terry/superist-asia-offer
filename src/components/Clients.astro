@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+
+import clientLogos from "../images/clients-logo_desktop.png";
+import clientLogosMobile from "../images/clients-logo_mobile.png";
+---
+<section class="m-0 py-[3rem] xl:py-[5rem]">
+    <div class="container container-narrow px-[1rem]">
+        <h2 class="section-title text-center">
+            <slot/>
+        </h2>
+        <Image class="hidden sm:block mt-[3rem]" src={clientLogos} alt="From start-ups to Fortune 500 companies, we work with brands to grow their revenue."/>
+        <Image class="block sm:hidden mt-[3rem] w-full" src={clientLogosMobile} alt="From start-ups to Fortune 500 companies, we work with brands to grow their revenue."/>
+    </div>
+</section>

@@ -5,8 +5,8 @@ import { Image } from "astro:assets";
 // Global components
 import Header from '../../components/common/Header.astro';
 import Footer from '../../components/common/Footer.astro';
-// import Clients from '../../components/Clients.astro';
-// import MarketingSolutions from '../../components/MarketingSolutions.astro';
+import Clients from '../../components/Clients.astro';
+import MarketingSolutions from '../../components/MarketingSolutions.astro';
 // import Partners from '../../components/Partners.astro';
 // import OurValues from '../../components/OurValues.astro';
 // import AgenciesComparision from '../../components/AgenciesComparision.astro';
@@ -21,7 +21,8 @@ import CtaButton from '../../components/buttons/CtaButton.astro';
 import heroBg from "../../images/home-hero-bg.jpg";
 import heroBgMobile from "../../images/home-hero-bg-mobile.jpg";
 import imgShane from "../../images/square-shane.jpg";
-import shanghai from "../../images/shanghai.jpg";
+import leadImg1 from "../../images/lead-img-1.jpg";
+import leadImg2 from "../../images/lead-img-2.jpg";
 import iPad from "../../images/case-ipad.png";
 
 // Data
@@ -48,8 +49,8 @@ import iPad from "../../images/case-ipad.png";
 		<section class="home-hero relative overflow-hidden bg-black-bg w-screen sm:pt-[9rem] sm:pb-[4rem] m-0 grid md:content-center">
 			<div class="container px-[1rem] sm:px-[3rem] z-[99] mt-[5rem] md:mt-0">
 				<div class="sm:w-3/5">
-					<h1 class="text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem]  md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem]">Dive into China’s Digital Frontier with Superist. Global Expertise, <br>Local Solutions, Delivered Seamlessly.</h1>
-					<CtaButton>Get Your Free Strategy Consultation</CtaButton>
+					<h1 class="text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem]  md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem]">Skyrocket your revenue & scale your brand with 2 FREE months of SEO</h1>
+					<CtaButton>Get 2 Free Months SEO</CtaButton>
 				</div>
 			</div>
 			<Image class="page-header-bg" src={heroBg} alt="We are Superist. Your Global Ambitions, Our China Expertise"/>
@@ -58,12 +59,12 @@ import iPad from "../../images/case-ipad.png";
 			</div>
 			<div class="bg-mask absolute top-0 right-0 bottom-[60%] left-0 z-[98] bg-gradient-to-b from-black to-transparent"></div>
 		</section>
-		<!-- <Clients>
+		<Clients>
 			From start-ups to Fortune 500 companies, we work with brands to grow their revenue.
-		</Clients> -->
-		<!-- <MarketingSolutions
+		</Clients>
+		<MarketingSolutions
 			title="Integrated Marketing Solutions" 
-			para="Whether you're looking to put your first step into China's market or the outside world, choosing Superist means unlocking access to first-in-market media products, collaborative strategies as well as inside intel with our network of partners."/> -->
+			para="Whether you're looking to put your first step into China's market or the outside world, choosing Superist means unlocking access to first-in-market media products, collaborative strategies as well as inside intel with our network of partners."/>
 		<!-- <Partners 
 			titleStyle="h2" 
 			title="Unrivalled Negotiation Prowess With Our Network" 
@@ -109,12 +110,37 @@ import iPad from "../../images/case-ipad.png";
 			<div class="container container-narrow px-0 sm:px-[2rem]">
 				<div class="flex flex-col sm:flex-row items-stretch">
 					<div class="sm:w-1/2">
-						<Image class="mb-8 sm:mb-0 sm:rounded-[20px]" src={shanghai} alt="Shanghai"/></div>
+						<Image class="mb-8 sm:mb-0 sm:rounded-[20px]" src={leadImg1} alt="Shanghai"/></div>
 					<div class="self-center sm:w-1/2 px-[1rem] md:px-0">
 						<div class="sm:pl-[4rem]">
-							<h2 class="mb-4">With Superist Anything is Possible!</h2>
+							<h2 class="mb-4">Get more leads and sales than you can handle with SEO services.</h2>
 							<div class="para font-[300] mb-5">
-								<p>Strategy to Execution, we deliver digital solutions that empowers global brands to speak with authenticity, rapid scaling, and doiminate Chinese Market.</p>
+								<p>Why wait a year for results when you can experience jaw-dropping growth within 90 days? With our unique, high-octane strategies, you’ll watch your revenue and traffic soar while the competition is still warming up.</p>
+                                <CtaButton>Get 2 free months seo</CtaButton>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <section>
+			<div class="container container-narrow px-0 sm:px-[2rem]">
+				<div class="flex flex-col sm:flex-row items-stretch">
+					<div class="sm:w-1/2 order-1 md:order-2">
+						<Image class="mb-8 sm:mb-0 sm:rounded-[20px]" src={leadImg2} alt="Shanghai"/></div>
+					<div class="self-center sm:w-1/2 px-[1rem] md:px-0 order-2 md:order-1">
+						<div class="sm:pl-[4rem]">
+							<h2 class="mb-4">Fed up with subpar SEO that doesn’t hit the mark?</h2>
+							<div class="para font-[300] mb-5">
+								<p>
+                                    <ul>
+                                        <li>Need more leads and sales?</li>
+                                        <li>Tired of pouring money into paid ads with little return?</li>
+                                        <li>Struggling to appear on the first page of search results?</li>
+                                        <li>Keen to skyrocket your organic traffic, but unsure where to start?</li>
+                                    </ul>
+                                </p>
+                                <p>Don't jeopardise your company by choosing the wrong agency. Get Superist to transform your business and 10x your ROI!</p>
 							</div>
 						</div>
 					</div>
@@ -126,9 +152,9 @@ import iPad from "../../images/case-ipad.png";
 				<div class="flex flex-col sm:flex-row items-stretch bg-black-bg sm:rounded-[20px]">
 					<div class="text-white-peral self-center sm:w-1/2">
 						<div class="px-[1rem] py-[3rem] sm:px-[3rem]">
-							<h2 class="mb-4">Ready to Enter, Understand the Path & Dominate the China Market Together!</h2>
-							<p class="mb-8">Work together with Superist and save your budget up to 82%</p>
-							<CtaButton>Get You Free Consultation</CtaButton>
+							<h2 class="mb-4">Enquire now for 2 free months of xSEO!</h2>
+							<p class="mb-8 text-white">Double the value, double the growth!</p>
+							<CtaButton>Get 2 free months seo</CtaButton>
 						</div>
 					</div>
 					<div class="sm:w-1/2 overflow-hidden">

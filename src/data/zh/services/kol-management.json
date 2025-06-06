@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/services/icon-branding-strategy.svg",
+        "serviceTitle": "KOL 策略",
+        "description": "我们与您合作，通过与您的目标、目标受众和业务目标保持一致，了解您对 KOL 策略的需求。我们的策略将为您的品牌确定最佳的 KOL，确保有效的参与计划。"
+    },
+    {
+        "icon": "/images/services/icon-kol.svg",
+        "serviceTitle": "KOL 识别与推广",
+        "description": "我们利用广泛的网络和市场洞察力为您的品牌识别最相关、最具影响力的 KOL。"
+    },
+    {
+        "icon": "/images/services/icon-campaign-execution.svg",
+        "serviceTitle": "方案执行",
+        "description": "我们通过管理和执行影响者方案，将您的 KOL 策略变为现实，确保所有交付成果都符合您品牌的标准和目标。"
+    }
+]

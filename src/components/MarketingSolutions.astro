@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+
+// Slider CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+// Data
+import solutionsEN from "../data/en/marketingSolutions.json";
+import solutionsZH from "../data/zh/marketingSolutions.json";
+
+interface Props {
+    title?: string;
+    para?: string;
+}
+
+const {title, para} = Astro.props;
+
+const currentLang = Astro.url.pathname.split('/')[1];
+let solutions = [];
+
+if (currentLang === "en") {
+    solutions = solutionsEN;
+} else {
+    solutions = solutionsZH;
+}
+---
+<section>
+    <div class="container container-narrow px-[1rem]">
+        <h2 class="section-title md:text-center">{title}</h2>
+        <p class="md:text-center">{para}</p>
+    </div>
+    <div class="hidden md:block container mt-[3rem] mb-[4rem]">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+            {
+                solutions.map((solution) => 
+                <div class="card-box flex flex-col text-center rounded-[18px] bg-white py-8 px-4 shadow-lg">
+                    <Image class="block mx-auto mt-3 mb-7" src={solution.icon} alt={solution.title} width="145" height="144"/>
+                    <h3 class="mb-4">{solution.title}</h3>
+                    <p class="mb-4 text-gray-text font-nimbus-sans">{solution.desc}</p>
+                    <a class="mt-auto mx-auto font-termina font-bold text-cta-red" href={solution.link}>
+                        {(currentLang === "en")?"Read More":"了解更多"}
+                    </a>
+                </div>
+                )
+            }
+        </div>
+    </div>
+    <div class="block md:hidden mt-[3rem] mb-[5rem] overflow-hidden">
+        <div class="mobile-slider solution-cards-mobile-slider">
+            {
+                solutions.map((solution) => 
+                    <div class="card-box mx-2 pb-[2rem]">
+                        <div class="flex flex-col h-full text-center rounded-[18px] bg-white py-8 px-4 mb-5 shadow-lg">
+                            <Image class="block mx-auto mt-3 mb-7" src={solution.icon} alt={solution.title} width="145" height="144"/>
+                            <h3 class="mb-4">{solution.title}</h3>
+                            <p class="mb-4 text-gray-text font-nimbus-sans">{solution.desc}</p>
+                            <a class="mt-auto mx-auto font-termina font-bold text-cta-red" href={solution.link}>
+                                {(currentLang === "en")?"Read More":"了解更多"}
+                            </a>
+                        </div>
+                    </div>
+                )
+            }
+        </div>
+    </div>
+</section>
+
+<script is:inline src="/scripts/slick.min.js"></script>
+<script is:inline>
+    $(document).ready(function(){
+        $('.solution-cards-mobile-slider').slick({
+            infinite: false,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    });
+</script>
