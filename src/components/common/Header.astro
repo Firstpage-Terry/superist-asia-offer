@@ -1,0 +1,329 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../images/superist-logo.svg";
+import menuIcon from "../../images/menu-icon.svg";
+import menuCorss from "../../images/menu-cross.svg";
+import CtaButton from "../buttons/CtaButton.astro";
+import LangSwitcher from "../buttons/LangSwitcher.astro";
+
+const currentLang = Astro.url.pathname.split('/')[1];
+---
+<header class="header fixed z-[9998] top-0 w-full transition-all">
+    <div class="container px-[1rem] h-[75px] text-white font-nimbus-sans font-bold flex justify-between items-center border-b-[1px] border-gray-light lg:px-0 lg:max-w-[1180px] xl:max-w-[1440px]">
+        <a class="header-logo relative inline-block t-[0] mx-auto md:mx-none md:ml-0 md:mr-[25px]" href="/">
+            <Image class="max-w-[163px] md:max-w-[195px]" src={Logo} alt="Superist Logo" width="195"/>
+        </a>
+        <div class="hidden lg:flex items-center">
+            <a class="inline-block px-[25px] py-[8px] rounded-full border-[1px] border-white-peral transition-all hover:bg-white-peral hover:text-cta-red" href="tel:+85223563222">+852 2356 3222</a>
+            <LangSwitcher/>
+        </div>
+        <a id="menu-btn" class="block lg:hidden" href="#">
+            <Image src={menuIcon} alt="Mobile menu" width="24"/>
+        </a>
+    </div>
+    <div class="hidden lg:flex container text-white flex-row justify-end items-center lg:max-w-[1180px] xl:max-w-[1440px]">
+        <ul class="main-nav inline-block list-none text-[15px]">
+            <li class="inline-block mx-[15px] py-[28px]">
+                <a class="px-[10px] hover:text-blue-main" href={`/${currentLang}/why-us`}>
+                    {(currentLang === "en")?"Why Us":"为什么选择我们"}
+                </a>
+            </li>
+            <li class="group inline-block mx-[15px] py-[28px] relative">
+                <span class="px-[10px] cursor-pointer font-bold">
+                    {(currentLang === "en")?"China Solutions":"中国解决方案"}
+                </span>
+                <ul class="main-sub-menu invisible list-none text-center w-[182px]
+                    bg-black-bg
+                    absolute
+                    top-[85px]
+                    left-1/2 
+                    -translate-x-1/2
+                    opacity-0
+                    transition-all
+                    group-hover:visible
+                    group-hover:opacity-100
+                    group-hover:top-[75px]
+                    ">
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/branding-and-strategy`}>{(currentLang === "en")?"Branding & Strategy":"品牌与战略"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/media-buying-and-advertising`}>{(currentLang === "en")?"Media Buying & Advertising":"媒体购买与广告"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/creative-and-content-strategy`}>{(currentLang === "en")?"Creative & Content Strategy":"创意与内容策略"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/china-solutions/kol-management`}>{(currentLang === "en")?"KOL Management":"KOL管理"}</a></li>
+                </ul>
+            </li>
+            <li class="group inline-block mx-[15px] py-[28px] relative">
+                <span class="px-[10px] cursor-pointer font-bold">
+                    {(currentLang === "en")?"Global Solutions":"全球解决方案"}
+                </span>
+                <ul class="main-sub-menu invisible list-none text-center w-[182px]
+                    bg-black-bg
+                    absolute
+                    top-[85px]
+                    left-1/2 
+                    -translate-x-1/2
+                    opacity-0
+                    transition-all
+                    group-hover:visible
+                    group-hover:opacity-100
+                    group-hover:top-[75px]
+                    ">
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/seo`}>{(currentLang === "en")?"SEO":"搜索引擎优化"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/advertising`}>{(currentLang === "en")?"Advertising":"广告"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/content-and-visual-production`}>{(currentLang === "en")?"Content & Visual Production":"内容与视觉制作"}</a></li>
+                    <li><a class="block py-[16px] leading-5" href={`/${currentLang}/global-solutions/email-marketing`}>{(currentLang === "en")?"Email Marketing":"邮件营销"}</a></li>
+                </ul>
+            </li>
+            <!-- <li class="inline-block mx-[15px] py-[28px]">
+                <a class="px-[10px] hover:text-blue-main" href={`/${currentLang}/contact`}>
+                    {(currentLang === "en")?"Contact":"联系"}
+                </a>
+            </li> -->
+        </ul>
+        <CtaButton addClass="inline-block uppercase" hasArrow={false}>
+            {(currentLang === "en")?"Contact Us":"联系我们"}
+        </CtaButton>
+        <!-- <a class="cta-btn" href="#">
+            <Image class="block lg:hidden" src={headerPhone} alt="Contact Us" width="28"/>
+        </a> -->
+    </div>
+</header>
+<div id="mobile-menu" class="hidden fixed z-[9999] top-0 left-0 bottom-0 right-0">
+    <div class="relative z-[9] overflow-y-scroll left-0 top-0 bottom-0 h-full bg-black w-9/12">
+        <div class="py-[1.6rem] px-[2rem] relative">
+            <Image id="menu-close" class="block cursor-pointer" src={menuCorss} alt="Close menu" width="24"/>
+            <LangSwitcher className="hidden text-white !absolute top-[15px] right-[15px]"/>
+        </div>
+        <div id="mobile-menu-body" class="hidden">
+            <div class="px-[2rem] border-b-2 border-white">
+                <p class="text-white font-bold text-[15px] mb-[5px] font-termina leading-[1.2]">YOUR GLOBAL </br>DIGITAL NETWORK</p>
+            </div>
+            <ul class="text-white font-bold font-[15px] mt-[20px]">
+                <li><a class="block p-[2rem] py-[1rem] hover:bg-blue-main" href={`/${currentLang}/why-us`}>{(currentLang === "en")?"Why Us":"为什么选择我们"}</a></li>
+                <li>
+                    <span class="block sub-menu-btn relative cursor-pointer p-[2rem] py-[1rem] hover:bg-blue-main">
+                        {(currentLang === "en")?"China Solutions":"中国解决方案"}
+                        <i class="mobile-menu-arrow fa-solid fa-chevron-up absolute right-[1rem] top-1/2 -translate-y-1/2"></i>
+                    </span>
+                    <ul class="sub-menu hidden bg-gray-text py-[1rem]">
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/china-solutions/branding-and-strategy`}>{(currentLang === "en")?"Branding & Strategy":"品牌与战略"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/china-solutions/media-buying-and-advertising`}>{(currentLang === "en")?"Media Buying & Advertising":"媒体购买与广告"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/china-solutions/creative-and-content-strategy`}>{(currentLang === "en")?"Creative & Content Strategy":"创意与内容策略"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/china-solutions/kol-management`}>{(currentLang === "en")?"KOL Management":"KOL管理"}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="block sub-menu-btn relative cursor-pointer p-[2rem] py-[1rem] hover:bg-blue-main">
+                        {(currentLang === "en")?"Global Solutions":"全球解决方案"}
+                        <i class="mobile-menu-arrow fa-solid fa-chevron-up absolute right-[1rem] top-1/2 -translate-y-1/2"></i>
+                    </span>
+                    <ul class="sub-menu hidden  bg-gray-text py-[1rem]">
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/global-solutions/seo`}>
+                                {(currentLang === "en")?"SEO":"搜索引擎优化"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/global-solutions/advertising`}>
+                                {(currentLang === "en")?"Advertising":"广告"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/global-solutions/content-and-visual-production`}>
+                                {(currentLang === "en")?"Content & Visual Production":"内容与视觉制作"}</a>
+                        </li>
+                        <li>
+                            <a class="block p-[2rem] py-[0.5rem] hover:text-blue-main" href={`/${currentLang}/global-solutions/email-marketing`}>{(currentLang === "en")?"Email Marketing":"邮件营销"}</a>
+                        </li>
+                    </ul>
+                </li> 
+                <li><a class="block p-[2rem] py-[1rem] hover:bg-blue-main" href={`/${currentLang}/contact`}>{(currentLang === "en")?"Contact":"联系"}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="absolute z-[1] top-0 right-0 bottom-0 left-0 bg-blue-main opacity-[0.8]"></div>
+</div>
+
+<style lang="scss">
+    .header {
+        &.scroll {
+            background-color: rgba(0,0,0,0.9);
+            @apply
+            lg:top-[-75px];
+
+            .header-logo {
+                @apply
+                lg:top-[75px];
+            }
+        }
+    }
+
+    .main-nav {
+        // span, a {
+        //     @apply
+        //     font-bold;
+        // }
+
+        li {
+            font-family: 'termina', sans-serif;
+            font-weight: 700;
+        }
+
+        .main-sub-menu {
+            @apply
+            rounded-[10px]
+            min-w-[200px];
+
+            li {
+                font-family: 'nimbus-sans', sans-serif;
+                font-weight: 300;
+                @apply
+                ease-out 
+                duration-100
+                hover:bg-blue-main;
+
+                a {
+                    @apply
+                    mx-4
+                    border-solid
+                    border-b-[1px]
+                    border-white;
+                }
+
+                &:first-child {
+                    @apply
+                    rounded-t-[10px];
+                }
+                &:last-child {
+                    @apply
+                    border-b-[0px]
+                    rounded-b-[10px];
+
+                    a {
+                        @apply
+                        border-[0px];
+                    }
+                }
+            }
+        }
+    }
+
+    #mobile-menu {
+        @apply
+        bg-gray-text;
+
+        ul {
+            li {
+                font-family: 'termina', sans-serif;
+                font-weight: 700;
+
+                ul.sub-menu {
+                    @apply
+                    py-0;
+
+                    li {
+                        font-family: 'nimbus-sans', sans-serif;
+                        font-weight: 300;
+                        @apply
+                        py-0
+                        pl-[30px]
+                        pr-[25%]
+                        hover:bg-blue-main;
+
+                        a {
+                            @apply
+                            border-t-[1px]
+                            border-white
+                            border-solid
+                            pl-[0]
+                            hover:text-white;
+                        }
+
+                        &:last-child {
+                            a {
+                                @apply
+                                border-b-[1px];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script is:inline>
+    const menuBtn = $('#menu-btn');
+    const menuClose = $('#menu-close');
+    const mobileMenu = $('#mobile-menu');
+    const menuBody = $('#mobile-menu-body');
+    
+    // Mobile Submenu
+    const submenuBtn = $('.sub-menu-btn');
+    const subMenu = $('.sub-menu');
+
+    menuBtn.on('click', function(e){
+        e.preventDefault();
+        $('body').toggleClass('fix');
+        mobileMenu.animate({width:'toggle'}, 350);
+        setTimeout(() => {
+            menuBody.fadeIn();
+            $('#mobile-menu .lang-dropdown').fadeIn();
+        }, 300)
+    })
+
+    menuClose.on('click', function(){
+        $('body').removeClass('fix');
+        menuBody.fadeOut();
+        $('#mobile-menu .lang-dropdown').fadeOut();
+        setTimeout(() => {
+            mobileMenu.animate({width:'toggle'}, 350);
+        }, 500)
+    })
+
+    submenuBtn.each(function(){
+        $(this).on('click', function(){
+            $(this).find('.mobile-menu-arrow').toggleClass('rotate-180');
+            $(this).next(subMenu).slideToggle();
+        })
+    })
+
+    const headerScroll = () => {
+        $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop();
+            var targetElement = $('.header');
+
+            if (scrollPosition > 50) {
+                targetElement.addClass('scroll');
+            } else {
+                targetElement.removeClass('scroll');
+            }
+        });
+    }
+    headerScroll();
+
+    // Resize
+    $(window).resize(function() {
+    if ($(window).width() > 998) {
+        mobileMenu.css('display','none');
+    }
+  });
+</script>
+
+
+<script is:inline>
+    // Language button
+    const langBtn = () => {
+        $('.lang-btn').each(function(){
+            $(this).on('click', function(){
+                $(this).add('.lang-list li a').toggleClass('active');
+                $(this).next('.lang-list').toggle();
+            })
+        });
+    }
+    langBtn();
+</script>

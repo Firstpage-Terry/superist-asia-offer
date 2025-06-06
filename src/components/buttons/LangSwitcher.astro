@@ -1,0 +1,54 @@
+---
+const languages = ['en', 'zh'];
+const currentLang = Astro.url.pathname.split('/')[1];
+const path = Astro.url.pathname.substring(3);
+
+export interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
+---
+<div class=`lang-dropdown relative ml-[1rem] ${className}`>
+    <span class="block lang-btn cursor-pointer transition-all hover:bg-white-peral hover:text-cta-red">{(currentLang === 'zh')?'中文':currentLang.toUpperCase()}<i class="fa-solid fa-chevron-down ml-1"></i></span>
+    <ul class="hidden lang-list">
+        {languages.filter(lang => lang !== currentLang).map(lang => (
+            <li class="">
+                <a href={`/${lang}${path}`}>
+                    {(lang === 'zh')?'中文':lang.toUpperCase()}
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>
+
+<style lang="scss">
+    .lang-btn,
+    .lang-list li a {
+        @apply
+        border-[1px] 
+        border-white-peral
+        rounded-sm
+        px-[14px]
+        py-[10px];
+
+        &.active {
+            @apply
+            text-cta-red
+            bg-white;
+        }
+    }
+
+    .lang-list {
+        @apply
+        absolute
+        w-full;
+    }
+
+    .lang-list li a {
+        @apply
+        block
+        relative
+        mt-[-1px];
+    }
+</style>

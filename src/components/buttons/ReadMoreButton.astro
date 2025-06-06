@@ -1,0 +1,36 @@
+---
+
+---
+<a class=
+    `rm-btn
+    uppercase
+    font-termina
+    font-bold
+    text-blue-main
+    `
+    href="#"
+    >
+<slot/><i class="fa-solid fa-chevron-down ml-2"></i></i>
+</a>
+
+<script is:inline>
+    $('.rm-btn').each(function(){
+        $(this).off('click').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('open');
+            $(this).prev('.hidden-content').slideToggle();
+        })
+    })
+</script>
+
+<style lang="scss">
+    .rm-btn {
+        &.open {
+            i {
+                @apply
+                transition-all
+                rotate-180;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,184 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../images/superist-logo.svg";
+import LocationPin from "../../images/location-pin.svg";
+import FooterMessageIcon from "../../images/icons/footer-icon-message.svg";
+import FooterPhoneIcon from "../../images/icons/footer-icon-phone.svg";
+import FooterEmailIcon from "../../images/icons/footer-icon-email.svg";
+import FooterConsulIcon from "../../images/icons/footer-icon-consultation.svg";
+
+const currentLang = Astro.url.pathname.split('/')[1];
+---
+<footer class="bg-black-bg py-[4rem] text-white-peral">
+    <div class="container grid grid-cols-1 md:grid-cols-12">
+        <div class="md:col-span-3 md:col-start-2">
+            <Image class="block max-w-[187px] md:max-w-[137px] mx-auto md:mx-0 mb-[15px]" src={Logo} alt="Superist Logo" width="137"/>
+            <div class="mb-[2.5rem]">
+                <div class="office flex items-start mb-[1rem]">
+                    <Image class="mr-[15px]" src={LocationPin} alt="Location"/>
+                    <div class="office-address text-[14px]">
+                        {(currentLang === "en")? 
+                            <h4 class="font-bold mb-[2px] uppercase font-nimbus-sans">Hong Kong</h4>
+                            <p class="font-[300] leading-[1.7]">
+                                3/F, Sun House, <br/>
+                                90 Connaught Road Central, <br/>
+                                Sheung Wan, Hong Kong <br/>
+                            </p>
+                        :
+                            <p class="font-[300] leading-[1.7]">
+                                上環干諾道中90號大新行3樓
+                            </p>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="office flex items-start mb-[1rem]">
+                    <Image class="mr-[15px]" src={LocationPin} alt="Location"/>
+                    <div class="office-address text-[14px]">
+                        {(currentLang === "en")?
+                            <h4 class="font-bold mb-[2px] uppercase font-nimbus-sans">Shenzhen</h4>
+                            <p class="font-[300] leading-[1.7]">COMING SOON</p>
+                        :
+                            <h4 class="font-bold mb-[2px] uppercase font-nimbus-sans">深圳</h4>
+                            <p class="font-[300] leading-[1.7]">即将来临</p>
+                        }
+                    </div>
+                </div>
+                <div class="flex text-[14px] mb-[1rem] whitespace-nowrap">
+                    <i class="fa-solid fa-envelope text-[22px] mr-[10px]"></i> HELLO@SUPERIST.COM
+                </div>
+            </div>
+        </div>
+        <div class="footer-menu-wrap flex flex-col md:col-span-7">
+            <ul class="footer-menu h-full grid md:grid-cols-4 order-2 md:order-1">
+                <li><h4>{(currentLang === "en")?"Services":"服务"}</h4>
+                    <ul class="footer-sub-menu">
+                        <li><a href={`/${currentLang}/services/branding-and-strategy`}>{(currentLang === "en")?"Branding & Strategy":"品牌与战略"}</a></li>
+                        <li><a href={`/${currentLang}/services/media-buying-and-advertising`}>{(currentLang === "en")?"Media Buying & Advertising":"媒体购买与广告"}</a></li>
+                        <li><a href={`/${currentLang}/services/creative-and-content-strategy`}>{(currentLang === "en")?"Creative & Content Strategy":"创意与内容策略"}</a></li>
+                        <li><a href={`/${currentLang}/services/kol-management`}>{(currentLang === "en")?"KOL Management":"KOL管理"}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href={`/${currentLang}/why-us`}><h4>
+                    {(currentLang === "en")?"Why Us":"为什么选择我们"}</h4></a>
+                </li>
+                <li><a href={`/${currentLang}/contact`}><h4>
+                    {(currentLang === "en")?"Contact":"联系"}</h4></a>
+                </li>
+            </ul>
+            <!-- <ul class="flex footer-social justify-between md:justify-end text-[22px] mb-[1rem] order-1 md:order-2">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul> -->
+        </div>
+        <div class="md:col-span-10 md:col-start-2 border-y-[1px] border-white-peral">
+            <ul class="footer-contact-list grid grid-cols-2 md:grid-cols-4 py-[1.5rem] text-center text-[16px]">
+                <li class="mx-[1rem] mb-5 md:mx-[3rem] md:mb-0">
+                    <a id="footer-message" class="block" href={`/${currentLang}/contact`}>
+                        <Image class="inline-block mb-[1rem]" src={FooterMessageIcon} alt="Send us a message" width="55"/>
+                        {(currentLang === "en")? 
+                            <p class="font-bold mb-[0.2rem]">Send us a message</p>
+                            <p>Click to send</p>
+                        :
+                            <p class="font-bold mb-[0.2rem]">给我们留言</p>
+                            <p>点击发送</p>
+                        }
+                    </a>
+                </li>
+                <li class="mx-[1rem] mb-5 md:mx-[3rem] md:mb-0">
+                    <a id="footer-phone" class="block" href="tel:+85223563222">
+                        <Image class="inline-block mb-[1rem]" src={FooterPhoneIcon} alt="Send us a message" width="55"/>
+                        {(currentLang === "en")? 
+                            <p class="font-bold mb-[0.2rem]">GIve us a call</p>
+                            <p>+852 2356 3222</p>
+                        :
+                            <p class="font-bold mb-[0.2rem]">与我们通话</p>
+                            <p>+852 2356 3222</p>
+                        }
+                    </a>
+                </li>
+                <li class="mx-[1rem] mb-5 md:mx-[3rem] md:mb-0">
+                    <a id="footer-email" class="block" href="mailto:hello@superist.com">
+                        <Image class="inline-block mb-[1rem]" src={FooterEmailIcon} alt="Send us a message" width="55"/>
+                        {(currentLang === "en")? 
+                            <p class="font-bold mb-[0.2rem]">Send us an email</p>
+                            <p>hello@superist.com</p>
+                        :
+                            <p class="font-bold mb-[0.2rem]">给我们电邮</p>
+                            <p>hello@superist.com</p>
+                        }
+                    </a>
+                </li>
+                <li class="mx-[1rem] mb-5 md:mx-[3rem] md:mb-0">
+                    <a id="footer-contact-us" class="block" href={`/${currentLang}/contact`}>
+                        <Image class="inline-block mb-[1rem]" src={FooterConsulIcon} alt="Send us a message" width="55"/>
+                        {(currentLang === "en")? 
+                            <p class="font-bold mb-[0.2rem]">Book consultation</p>
+                            <p>Click the link</p>
+                        :
+                            <p class="font-bold mb-[0.2rem]">预约查询</p>
+                            <p>点击链接</p>
+                        }
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="md:col-span-10 md:col-start-2 pt-[1rem]">
+            <div class="grid grid-cols-1 md:grid-cols-2 text-center md:text-left place-content-between">
+                <p class="footer-statement text-[14px]">© {new Date().getFullYear()} Superist. All rights reserved</p>
+                {(currentLang === "en")? 
+                    <a class="place-self-center md:place-self-end" href={`/${currentLang}/terms-of-business`}>Terms of Business</a>
+                :''}
+            </div>
+        </div>
+    </div> 
+</footer>
+
+<style lang="scss">
+    .footer-menu {
+        li {
+            @apply 
+            inline-block;
+
+            h4 {
+                @apply
+                font-bold
+                text-[18px]
+                font-nimbus-sans
+                uppercase
+                mb-[10px];
+            }
+
+            .footer-sub-menu {
+            @apply
+            pr-[20px];
+
+                li {
+                    @apply
+                    w-full
+                    leading-[1.3]
+                    mb-[1rem];
+
+                    a {
+                        @apply
+                        block
+                        text-[14px]
+                        font-[300]
+                        mb-[5px];
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        li {
+            @apply
+            ml-[10px];
+        }
+    }
+</style>

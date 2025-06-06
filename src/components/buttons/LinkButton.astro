@@ -1,0 +1,38 @@
+---
+interface Props {
+    altTheme?: boolean;
+    addClass?: string;
+}
+
+const { altTheme, addClass } = Astro.props;
+---
+
+<a class=
+    `cta-btn 
+    inline-block 
+    p-[0.8rem]
+    px-[1.5rem] 
+    rounded-[35px] 
+    font-bold 
+    font-nimbus-sans-ext 
+    whitespace-normal
+    text-center
+    text-[15px]
+    transition-all 
+    ${altTheme === true ? 'bg-green text-white hover:bg-white hover:text-green' : 'bg-cta-red text-white hover:bg-white hover:text-cta-red'} 
+    ${addClass}
+    `
+    href="/">
+    <slot/>
+</a>
+
+<script is:inline>
+    // $('.cta-btn').each(function(){
+    //     $(this).on('click', function(e) {
+    //         e.preventDefault();
+    //         $('html, body').animate({
+    //             scrollTop: $('#footer-form').offset().top - 130
+    //         }, 800);
+    //     });
+    // })
+</script>

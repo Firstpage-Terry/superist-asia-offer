@@ -1,0 +1,26 @@
+---
+import CtaButton from "../buttons/CtaButton.astro";
+
+interface Props {
+    btn?: boolean;
+}
+
+const { btn } = Astro.props;
+
+const currentLang = Astro.url.pathname.split('/')[1];
+---
+<section class="relative overflow-hidden bg-black-bg w-screen m-0 grid sm:content-center">
+    <div class="container px-[1rem] sm:px-[3rem] z-[99] mt-[5rem] md:mt-0">
+        <div class="mt-0 mb-[2rem] sm:w-3/5 md:mt-[14rem] md:mb-[8rem]">
+            <h1 class="text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem]">
+                <slot/>
+            </h1>
+            {(btn !== false)?<CtaButton>{(currentLang === "en")?'LEARN MORE':'了解更多'}</CtaButton>:''}
+        </div>
+    </div>
+    <slot name="header-img" class="hidden sm:block absolute right-0 object-cover w-full h-full"/>
+    <div class="mobile-hero-bg-wrap">
+        <slot name="header-img-mobile"/>
+    </div>
+    <div class="bg-mask absolute top-0 right-0 bottom-[60%] left-0 z-[98] bg-gradient-to-b from-black to-transparent"></div>
+</section>
