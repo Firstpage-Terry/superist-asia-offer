@@ -1,0 +1,232 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from "astro:assets";
+
+// Global components
+import Header from '../../components/common/Header.astro';
+import Footer from '../../components/common/Footer.astro';
+// import Clients from '../../components/Clients.astro';
+// import MarketingSolutions from '../../components/MarketingSolutions.astro';
+// import Partners from '../../components/Partners.astro';
+// import OurValues from '../../components/OurValues.astro';
+// import AgenciesComparision from '../../components/AgenciesComparision.astro';
+// import Testimonials from '../../components/Testimonials.astro';
+// import AgencyMap from '../../components/AgencyMap.astro';
+// import Faq from '../../components/Faq.astro';
+
+// Buttons
+import CtaButton from '../../components/buttons/CtaButton.astro';
+
+// Images
+import heroBg from "../../images/home-hero-bg.jpg";
+import heroBgMobile from "../../images/home-hero-bg-mobile.jpg";
+import imgShane from "../../images/square-shane.jpg";
+import shanghai from "../../images/shanghai.jpg";
+import iPad from "../../images/case-ipad.png";
+
+// Data
+// import faqData from "../../data/en/faqs/faq-home.json";
+// const faqJasonData = faqData;
+---
+<Layout title="Superist - Your Global Digital Network">
+	<main class="relative">
+		<Header/>
+		<!-- <section class="home-hero relative overflow-hidden bg-black-bg w-screen h-screen min-h-[650px] m-0">
+			<div class="absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center pb-[5rem]">
+				<h1 class="text-white-peral text-center mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] md:text-[3rem] lg:text-[4rem]">We are <span class="blue-text-highlight">Superist.</span><br/>Your Global Ambitions, <br/>Our China Expertise</h1>
+				<CtaButton>GET A FREE QUOTE</CtaButton>
+			</div>
+			<div class="absolute z-30 right-0 bottom-[1.5rem] left-0">
+				<div class="scroll-downs block sm:hidden md:block m-auto mt-5 lg:mt-10 w-[28px]">
+					<div class="mouse">
+						<div class="scroller"></div>
+					</div>
+				</div>
+				<Image class="block m-auto mt-4 w-[7px] lg:w-[11px]" src={Arrow} alt="Scroll arrow"/>
+			</div>
+		</section> -->
+		<section class="home-hero relative overflow-hidden bg-black-bg w-screen sm:pt-[9rem] sm:pb-[4rem] m-0 grid md:content-center">
+			<div class="container px-[1rem] sm:px-[3rem] z-[99] mt-[5rem] md:mt-0">
+				<div class="sm:w-3/5">
+					<h1 class="text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem]  md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem]">Dive into China’s Digital Frontier with Superist. Global Expertise, <br>Local Solutions, Delivered Seamlessly.</h1>
+					<CtaButton>Get Your Free Strategy Consultation</CtaButton>
+				</div>
+			</div>
+			<Image class="page-header-bg" src={heroBg} alt="We are Superist. Your Global Ambitions, Our China Expertise"/>
+			<div class="mobile-hero-bg-wrap">
+				<Image class="block sm:hidden w-full" src={heroBgMobile} alt="We are Superist. Your Global Ambitions, Our China Expertise"/>
+			</div>
+			<div class="bg-mask absolute top-0 right-0 bottom-[60%] left-0 z-[98] bg-gradient-to-b from-black to-transparent"></div>
+		</section>
+		<!-- <Clients>
+			From start-ups to Fortune 500 companies, we work with brands to grow their revenue.
+		</Clients> -->
+		<!-- <MarketingSolutions
+			title="Integrated Marketing Solutions" 
+			para="Whether you're looking to put your first step into China's market or the outside world, choosing Superist means unlocking access to first-in-market media products, collaborative strategies as well as inside intel with our network of partners."/> -->
+		<!-- <Partners 
+			titleStyle="h2" 
+			title="Unrivalled Negotiation Prowess With Our Network" 
+			para="Our extensive partner network allows us access to cutting-edge media offerings, collaborative strategies, and valuable insights. Choose Superist and stay steps ahead of your competition at the forefront of your industry."/>
+		<OurValues/> -->
+		<!-- <section class="md:overflow-hidden">
+			<div class="container container-narrow relative">
+				<div class="flex flex-col py-[3rem] md:pl-[2rem] md:flex-row">
+					<div class="z-[99] text-white py-10 md:w-1/2">
+						<p class="uppercase text-blue-main font-termina mb-2">Our Recent Work</p>
+						<h2>decathlon.com.hk</h2>
+						<p class="text-[1rem] md:text-gray-light mb-5">Decathlon is a global sportswear and goods retailer with over 1,500 stores across 57 countries.</p>
+						<div class="case-data grid grid-cols-2 gap-5">
+							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center sm:text-center sm:flex-col sm:col-span-1">
+								<div class="case-data__number font-termina font-bold mr-5 md:mr-0">
+									<span class="text-[3.5rem]">33.7</span><span class="font-[400] text-[2rem]">%</span>
+								</div>
+								<p>Increase in monthly website visitors.</p>
+							</div>
+							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center sm:text-center sm:flex-col sm:col-span-1">
+								<div class="case-data__number font-termina font-bold mr-5 md:mr-0">
+									<span class="text-[3.5rem]">330</span><span class="font-[400] text-[2rem]">%</span>
+								</div>
+								<p>Page 1 keyphrases on Google HK.</p>
+							</div>
+							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center">
+								<div class="case-data__number font-termina font-bold mr-5">
+									<span class="text-[3.5rem]">124</span><span class="font-[400] text-[2rem]">%</span>
+								</div>
+								<p>Increase in non-branded organic traffic over 6 months.</p>
+							</div>
+						</div>
+					</div>
+					<div class="w-1/2 md:w-1/2 relative  mx-auto">
+						<Image class="relative z-[99] md:ml-[2rem] md:top-[-40px] md:absolute md:max-w-[135%]" src={iPad} alt=""/>
+					</div>
+				</div>
+				<div class="absolute z-[9] bg-gradient-to-r from-[#17121A] to-[#1057FF] top-[1rem] right-0 bottom-[9rem] left-0 my-[1.5rem] md:right-[-100%] md:bottom-[1rem] md:rounded-l-[100px]"></div>
+			</div>
+		</section> -->
+		<!-- <AgenciesComparision/> -->
+		<section>
+			<div class="container container-narrow px-0 sm:px-[2rem]">
+				<div class="flex flex-col sm:flex-row items-stretch">
+					<div class="sm:w-1/2">
+						<Image class="mb-8 sm:mb-0 sm:rounded-[20px]" src={shanghai} alt="Shanghai"/></div>
+					<div class="self-center sm:w-1/2 px-[1rem] md:px-0">
+						<div class="sm:pl-[4rem]">
+							<h2 class="mb-4">With Superist Anything is Possible!</h2>
+							<div class="para font-[300] mb-5">
+								<p>Strategy to Execution, we deliver digital solutions that empowers global brands to speak with authenticity, rapid scaling, and doiminate Chinese Market.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container container-narrow px-0 sm:px-[1rem]">
+				<div class="flex flex-col sm:flex-row items-stretch bg-black-bg sm:rounded-[20px]">
+					<div class="text-white-peral self-center sm:w-1/2">
+						<div class="px-[1rem] py-[3rem] sm:px-[3rem]">
+							<h2 class="mb-4">Ready to Enter, Understand the Path & Dominate the China Market Together!</h2>
+							<p class="mb-8">Work together with Superist and save your budget up to 82%</p>
+							<CtaButton>Get You Free Consultation</CtaButton>
+						</div>
+					</div>
+					<div class="sm:w-1/2 overflow-hidden">
+						<Image class="sm:rounded-r-[20px] h-full object-cover" src={imgShane} alt="Shane"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section>
+			<div class="container">
+				<h1 class="text-left mb-8 md:mb-10">Facts to Success</h1>
+				<div class="w-full max-w-[1100px] pt-0 pb-5 md:pt-8 md:pb-0 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
+						<span class="font-[600] text-[32px] md:text-[40px]">1600+</span>
+						<h3>Talents</h3>
+					</div>
+					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
+						<span class="font-[600] text-[32px] md:text-[40px]">10+</span>
+						<h3>Years of Experience</h3>
+					</div>
+					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
+						<span class="font-[600] text-[32px] md:text-[40px]">10k+</span>
+						<h3>Clients</h3>
+					</div>
+					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
+						<span class="font-[600] text-[32px] md:text-[40px]">60k</span>
+						<h3>Strategies Formulated</h3>
+					</div>
+					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
+						<span class="font-[600] text-[32px] md:text-[40px]">13</span>
+						<h3>Locations</h3>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- <Testimonials>
+			See what our clients are saying!
+		</Testimonials> -->
+		<!-- <AgencyMap>
+			<span slot="title">Superist Ecosystem</span>
+			<span slot="sub-title">
+				<strong>11 companies</strong>, operating in <strong>13 countries</strong>, <strong>8 languages</strong> & <strong>1800+ talent</strong>.
+			</span>
+		</AgencyMap> -->
+		<!-- <Faq faqs={faqJasonData}>
+			<span slot="title">FAQ</span>
+			<span slot="sub-title">Frequently asked questions</span>
+		</Faq> -->
+		<Footer/>
+	</main>
+</Layout>
+
+<!-- <style lang="scss">
+	.mobile-hero-bg-wrap {
+		@apply
+		relative
+		top-[-1px];
+
+		&::before {
+			@apply
+			hidden
+			content-[''] 
+			absolute 
+			w-full 
+			h-[80px]
+			z-[99] 
+			top-0
+			left-0 
+			bg-gradient-to-b
+			from-black-bg
+			via-[#2f2f2f];
+		}
+	}
+</style> -->
+
+<!-- <style>
+	.mouse {
+		width: 3px;
+		padding: 5px 10px;
+		height: 28px;
+		border: 3px solid #fff;
+		border-radius: 25px;
+		opacity: 1;
+		box-sizing: content-box;
+	}
+	.scroller {
+		width: 3px;
+		height: 10px;
+		border-radius: 25%;
+		background-color: #fff;
+		animation-name: scroll;
+		animation-duration: 2.2s;
+		animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+		animation-iteration-count: infinite;
+	}
+	@keyframes scroll {
+		0% { opacity: 0; }
+		10% { transform: translateY(0); opacity: 1; }
+		100% { transform: translateY(15px); opacity: 0;}
+	}
+</style> -->
