@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+import PartnersLogoDesktop from "../images/logos/partners/superist_partners_desktop.svg";
+import PartnersLogoMobile from "../images/logos/partners/superist_partners_mobile.svg";
+
+interface Props {
+    titleStyle: string;
+    title?: string;
+    para?: string;
+}
+
+const {titleStyle, title, para} = Astro.props;
+---
+<section class="bg-cloud-gray my-0 py-[2rem] md:py-[4rem]">
+    <div class="container">
+        <div class="max-w-[800px] mx-auto">
+            {(titleStyle === "h1") &&
+                <h1 class="text-left mb-4 md:mb-10">
+                    {title}
+                </h1>   
+            }
+            {(titleStyle === "h2") &&
+                <h2 class="text-left md:text-center mb-4 md:mb-6">
+                    {title}
+                </h2>
+            }
+            <p class={`${(titleStyle === "h1") ? 'subtitle mb-10 md:mb-16' : 'text-left md:text-center mb-10 md:mb-15'}`}>{para}</p>
+        </div>
+        <div class="w-full max-w-[998px] mx-auto">
+                <Image class="hidden md:block w-full m-auto" src={PartnersLogoDesktop} alt="Our Partners"/>
+                <Image class="block md:hidden w-full m-auto" src={PartnersLogoMobile} alt="Our Partners"/>
+        </div>
+    </div>
+</section>

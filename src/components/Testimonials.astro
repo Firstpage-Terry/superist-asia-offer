@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import StarSrc from '../images/icons/rate-star.svg';
+
+// Slider CSS
+import 'slick-carousel/slick/slick-theme.css';
+
+// Data
+import testimonialsEN from "../data/en/testimonials.json";
+import testimonialsZH from "../data/zh/testimonials.json";
+
+const currentLang = Astro.url.pathname.split('/')[1];
+let testimonials = [];
+
+if (currentLang === "en") {
+    testimonials = testimonialsEN;
+} else {
+    testimonials = testimonialsZH;
+}
+
+---
+<section>
+    <div class="container">
+        <h2 class="text-center mb-[2rem] md:mb-[4rem]">
+            <slot/>
+        </h2>
+        <div class="hidden md:grid tes-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            {
+                testimonials.map((testimonial) => 
+                <div  class="grid text-center mb-5">
+                    <div class="rating flex justify-center mb-4">
+                        <Image width="33" src={StarSrc} alt=""/>
+                        <Image width="33" src={StarSrc} alt=""/>
+                        <Image width="33" src={StarSrc} alt=""/>
+                        <Image width="33" src={StarSrc} alt=""/>
+                        <Image width="33" src={StarSrc} alt=""/>
+                    </div>
+                    <p class="mb-[2rem] leading-[22.4px]">{testimonial.quote}</p>
+                    <p class="place-self-end w-full text-black-bg"><strong>{testimonial.client}</strong></p>
+                </div>
+                )
+            }
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="block md:hidden mb-[5rem] overflow-hidden">
+        <div class="mobile-slider tes-list-mobile relative pb-[2rem]">
+            {
+                testimonialsEN.map((testimonial) => 
+                <div class="tes-list-mobile__item">
+                    <div class="grid pr-8">
+                        <div class="rating flex mb-4">
+                            <Image width="33" src={StarSrc} alt=""/>
+                            <Image width="33" src={StarSrc} alt=""/>
+                            <Image width="33" src={StarSrc} alt=""/>
+                            <Image width="33" src={StarSrc} alt=""/>
+                            <Image width="33" src={StarSrc} alt=""/>
+                        </div>
+                        <p class="mb-[2rem] font-[300]">{testimonial.quote}</p>
+                        <p class="place-self-end w-full text-black-bg"><strong>{testimonial.client}</strong></p>
+                    </div>
+                </div>
+                )
+            }
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .rating {
+        img {
+            @apply
+            mx-1;
+        }
+    }
+</style>
+
+<script is:inline src="/scripts/slick.min.js"></script>
+<script is:inline>
+    $(document).ready(function(){
+        $('.tes-list-mobile').slick({
+            infinite: false,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    });
+</script>
