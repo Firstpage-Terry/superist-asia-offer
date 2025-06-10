@@ -1,4 +1,4 @@
-const THANK_YOU_PAGE = "https://firstpage.hk/thank-you";
+const THANK_YOU_PAGE = "https://superist.com/thank-you";
 
 const HS_OFFICE_ID = "3832363";
 const HS_FORM_ID = "7dc8017c-13cc-4303-94ee-24035fca0c76";

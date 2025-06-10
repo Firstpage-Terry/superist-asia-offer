@@ -5,11 +5,14 @@ import { Image } from "astro:assets";
 // Global components
 import Header from '../../components/common/Header.astro';
 import Footer from '../../components/common/Footer.astro';
-import HeroForm from "../../forms/HeroForm.astro";
 import Clients from '../../components/Clients.astro';
 import MarketingSolutions from '../../components/MarketingSolutions.astro';
 import Partners from '../../components/Partners.astro';
 import Testimonials from '../../components/Testimonials.astro';
+
+// Forms
+import HeroForm from "../../forms/HeroForm.astro";
+import { PopupForm } from "../../forms/PopupForm";
 
 // Buttons
 import CtaButton from '../../components/ui/buttons/CtaButton.astro';
@@ -22,10 +25,6 @@ import leadImg2 from "../../images/lead-img-2.jpg";
 import StarSrc from '../../images/icons/rate-star.svg';
 import imgShane from "../../images/square-shane.jpg";
 import iPad from "../../images/ipad-sentr.png";
-
-// Data
-// import faqData from "../../data/en/faqs/faq-home.json";
-// const faqJasonData = faqData;
 ---
 <Layout title="Superist - Your Global Digital Network">
 	<main class="relative">

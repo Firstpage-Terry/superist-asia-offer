@@ -4,6 +4,9 @@ interface Props {
     hasArrow?: boolean;
     addClass?: string;
     url?: string;
+    onClick?: () => void;
+    children?: any;
+    type?: any;
 }
 
 const { altTheme, hasArrow, addClass,url } = Astro.props;
