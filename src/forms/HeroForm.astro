@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+
+import MobileHeroBg from "../images/fei-hero-banner.png";
+import { FormButton } from "../components/ui/buttons/FormButton";
+import { Input } from "../components/ui/Input";
+---
+
+<form method="POST" id="hero-form" class="relative mt-4">
+  <div class="form-hide">
+    <Image src={MobileHeroBg} alt="Fei Chen" class="absolute lg:hidden bottom-[55%] left-[52%] sm:left-[65%] md:left-[61%] md:left-auto md:right-0 w-4/5 sm:w-1/2" />
+
+    <div class="flex flex-col gap-3 flex flex-col lg:flex-row lg:gap-0">
+      <div class="lg:w-[250px] xl:w-[280px] relative">
+        <Input placeholder="Enter your website" className="lg:rounded-r-none lg:w-full" name="website" required />
+        <div id="error-message" class="text-sm lg:absolute lg:top-[100%] lg:left-0 w-full mt-1 text-white"></div>
+      </div>
+      <FormButton id="form-part-1-button" className="lg:rounded-l-none" type="button">
+        <slot />
+      </FormButton>
+    </div>
+  </div>
+
+  <div id="form-part-2" style="display: none;" class="-mt-16 md:-mt-0">
+    <h1 class="text-3xl lg:text-4xl lg:text-center my-6 max-w-[600px] text-white">Please enter your details.</h1>
+
+    <div class="grid grid-cols-2 gap-3 max-w-[600px]">
+      <Input placeholder="First Name*" name="firstName" required className="col-span-2 lg:col-span-1 lg:w-full" />
+      <Input placeholder="Phone*" name="phone" required className="col-span-2 lg:col-span-1 lg:w-full" type="tel" maxLength={8}/>
+      <Input placeholder="Email*" name="email" required className="col-span-2 lg:w-full" type="email" />
+      <select name="what_is_your_budget_range" class="col-span-2 rounded-[0.375rem] font-semibold bg-white text-gray-900 w-full color-gray-600 px-4 py-5 shadow-lg" required 
+        style='appearance: "none",
+        backgroundImage: `url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right 0.7rem top 50%",
+        backgroundSize: "0.65rem auto"'
+      >
+        <option value="" disabled selected>What is your monthly digital marketing budget?</option>
+        <option value="Less than 10,000 HKD">Less than 10,000 HKD</option>
+        <option value="10,000 - 25,000 HKD">10,000 - 25,000 HKD</option>
+        <option value="25,000 - 50,000 HKD">25,000 - 50,000 HKD</option>
+        <option value="50,000 - 100,000 HKD">50,000 - 100,000 HKD</option>
+        <option value="100,000 HKD+">100,000 HKD+</option>
+      </select>
+
+      <!-- <Button id="form-part-2-button" type="submit" className="lg:w-full col-span-2" client:only="react"
+        data-sitekey="6LffB4wpAAAAAG-muOu4bzOWGAQ3ia1IyQ82U-EK"
+        data-callback='onSubmit'
+        data-action='submit'>
+        <slot />
+      </Button> -->
+      <FormButton id="form-part-2-button" type="submit" className="lg:w-full col-span-2" client:only="react">
+        <slot />
+      </FormButton>
+    </div>
+  </div>
+</form>
+
+<style>
+  select:invalid { color: #9ca3af;}
+</style>
+
+<script>
+  import { submitToHs } from "./submitToHs_no_booking";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    init();
+  });
+
+  function init() {
+    /* Form Part 1 Submit handler */
+    document.getElementById("form-part-1-button")?.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const websiteInput = document.querySelector("input[name='website']") as HTMLInputElement;
+
+      if (websiteInput.validity.patternMismatch) {
+        document.getElementById("error-message")!.innerText = "Invalid input.";
+        return;
+      }
+
+      // @ts-ignore
+      if (!document.querySelector("input[name='website']")?.value) {
+        document.getElementById("error-message")!.innerText = "Please enter your website.";
+        return;
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      document.querySelectorAll(".form-hide").forEach((el: any) => {
+        el.style.display = "none";
+      });
+      document.getElementById("form-part-2")!.style.display = "block";
+    });
+
+    document.getElementById("form-part-2-button")?.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // @ts-ignore
+      if (!document.querySelector("input[name='website']")?.value) {
+        document.getElementById("error-message")!.innerText = "Please enter your website.";
+        return;
+      }
+
+      document.querySelectorAll(".form-hide").forEach((el: any) => {
+        el.style.display = "none";
+      });
+      document.getElementById("form-part-2")!.style.display = "block";
+    });
+
+    /* Form Part 2 Submit handler */
+    document.getElementById("hero-form")?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      document.getElementById("form-part-2-button")!.setAttribute("disabled", "true");
+      document.getElementById("form-part-2-button")!.innerText = "Submitting...";
+
+      // @ts-ignore
+      await submitToHs(new FormData(document.querySelector<HTMLFormElement>("#hero-form")!));
+
+      document.getElementById("form-part-2-button")!.removeAttribute("disabled");
+      document.getElementById("form-part-2-button")!.innerText = "Submit";
+    });
+  }
+</script>

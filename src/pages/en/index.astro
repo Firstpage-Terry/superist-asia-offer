@@ -5,17 +5,14 @@ import { Image } from "astro:assets";
 // Global components
 import Header from '../../components/common/Header.astro';
 import Footer from '../../components/common/Footer.astro';
+import HeroForm from "../../forms/HeroForm.astro";
 import Clients from '../../components/Clients.astro';
 import MarketingSolutions from '../../components/MarketingSolutions.astro';
 import Partners from '../../components/Partners.astro';
-// import OurValues from '../../components/OurValues.astro';
-// import AgenciesComparision from '../../components/AgenciesComparision.astro';
 import Testimonials from '../../components/Testimonials.astro';
-// import AgencyMap from '../../components/AgencyMap.astro';
-// import Faq from '../../components/Faq.astro';
 
 // Buttons
-import CtaButton from '../../components/buttons/CtaButton.astro';
+import CtaButton from '../../components/ui/buttons/CtaButton.astro';
 
 // Images
 import heroBg from "../../images/home-hero-bg.jpg";
@@ -50,8 +47,8 @@ import iPad from "../../images/ipad-sentr.png";
 		<section class="home-hero relative overflow-hidden bg-black-bg w-screen sm:pt-[9rem] sm:pb-[4rem] m-0 grid md:content-center">
 			<div class="container px-[1rem] sm:px-[3rem] z-[99] mt-[5rem] md:mt-0">
 				<div class="sm:w-3/5">
-					<h1 class="text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem]  md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem]">Skyrocket your revenue & scale your brand with 2 FREE months of SEO</h1>
-					<CtaButton>Get 2 Free Months SEO</CtaButton>
+					<h1 class="form-hide text-white-peral font-termina mt-[4rem] mb-[1rem] lg:mb-[2rem] text-[2rem] sm:text-[2.2rem]  md:text-[2.5rem] lg:text-[3rem] xl:text-[3.5rem]">Skyrocket your revenue & scale your brand with 2 FREE months of SEO</h1>
+					<HeroForm>Get 2 Free Months SEO</HeroForm>
 				</div>
 			</div>
 			<Image class="page-header-bg" src={heroBg} alt="We are Superist. Your Global Ambitions, Our China Expertise"/>
@@ -66,43 +63,6 @@ import iPad from "../../images/ipad-sentr.png";
 		<MarketingSolutions
 			title="Integrated Marketing Solutions" 
 			para="Whether you're looking to put your first step into China's market or the outside world, choosing Superist means unlocking access to first-in-market media products, collaborative strategies as well as inside intel with our network of partners."/>
-		<!-- <OurValues/> -->
-		<!-- <section class="md:overflow-hidden">
-			<div class="container container-narrow relative">
-				<div class="flex flex-col py-[3rem] md:pl-[2rem] md:flex-row">
-					<div class="z-[99] text-white py-10 md:w-1/2">
-						<p class="uppercase text-blue-main font-termina mb-2">Our Recent Work</p>
-						<h2>decathlon.com.hk</h2>
-						<p class="text-[1rem] md:text-gray-light mb-5">Decathlon is a global sportswear and goods retailer with over 1,500 stores across 57 countries.</p>
-						<div class="case-data grid grid-cols-2 gap-5">
-							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center sm:text-center sm:flex-col sm:col-span-1">
-								<div class="case-data__number font-termina font-bold mr-5 md:mr-0">
-									<span class="text-[3.5rem]">33.7</span><span class="font-[400] text-[2rem]">%</span>
-								</div>
-								<p>Increase in monthly website visitors.</p>
-							</div>
-							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center sm:text-center sm:flex-col sm:col-span-1">
-								<div class="case-data__number font-termina font-bold mr-5 md:mr-0">
-									<span class="text-[3.5rem]">330</span><span class="font-[400] text-[2rem]">%</span>
-								</div>
-								<p>Page 1 keyphrases on Google HK.</p>
-							</div>
-							<div class="flex flex-row rounded-[20px] col-span-2 border-green border-[1px] p-[1rem] items-center">
-								<div class="case-data__number font-termina font-bold mr-5">
-									<span class="text-[3.5rem]">124</span><span class="font-[400] text-[2rem]">%</span>
-								</div>
-								<p>Increase in non-branded organic traffic over 6 months.</p>
-							</div>
-						</div>
-					</div>
-					<div class="w-1/2 md:w-1/2 relative  mx-auto">
-						<Image class="relative z-[99] md:ml-[2rem] md:top-[-40px] md:absolute md:max-w-[135%]" src={iPad} alt=""/>
-					</div>
-				</div>
-				<div class="absolute z-[9] bg-gradient-to-r from-[#17121A] to-[#1057FF] top-[1rem] right-0 bottom-[9rem] left-0 my-[1.5rem] md:right-[-100%] md:bottom-[1rem] md:rounded-l-[100px]"></div>
-			</div>
-		</section> -->
-		<!-- <AgenciesComparision/> -->
 		<section>
 			<div class="container container-narrow px-0 sm:px-[2rem]">
 				<div class="flex flex-col sm:flex-row items-stretch">
@@ -162,10 +122,6 @@ import iPad from "../../images/ipad-sentr.png";
 					<p class="mb-6 w-full"><strong>Ulrich Dosch</strong></p>
 					<CtaButton>Get 2 free months seo</CtaButton>
 				</div>
-				<!-- <div class="w-full max-w-[998px] mx-auto">
-						<Image class="hidden md:block w-full m-auto" src={PartnersLogoDesktop} alt="Our Partners"/>
-						<Image class="block md:hidden w-full m-auto" src={PartnersLogoMobile} alt="Our Partners"/>
-				</div> -->
 			</div>
 		</section>
 		
@@ -216,44 +172,6 @@ import iPad from "../../images/ipad-sentr.png";
 				</div>
 			</div>
 		</section>
-		
-		<!-- <section>
-			<div class="container">
-				<h1 class="text-left mb-8 md:mb-10">Facts to Success</h1>
-				<div class="w-full max-w-[1100px] pt-0 pb-5 md:pt-8 md:pb-0 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
-					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
-						<span class="font-[600] text-[32px] md:text-[40px]">1600+</span>
-						<h3>Talents</h3>
-					</div>
-					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
-						<span class="font-[600] text-[32px] md:text-[40px]">10+</span>
-						<h3>Years of Experience</h3>
-					</div>
-					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
-						<span class="font-[600] text-[32px] md:text-[40px]">10k+</span>
-						<h3>Clients</h3>
-					</div>
-					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
-						<span class="font-[600] text-[32px] md:text-[40px]">60k</span>
-						<h3>Strategies Formulated</h3>
-					</div>
-					<div class="mx-[1rem] md:mx-[3rem] mb-[2rem] md:mb-[0rem]">
-						<span class="font-[600] text-[32px] md:text-[40px]">13</span>
-						<h3>Locations</h3>
-					</div>
-				</div>
-			</div>
-		</section> -->
-		<!-- <AgencyMap>
-			<span slot="title">Superist Ecosystem</span>
-			<span slot="sub-title">
-				<strong>11 companies</strong>, operating in <strong>13 countries</strong>, <strong>8 languages</strong> & <strong>1800+ talent</strong>.
-			</span>
-		</AgencyMap> -->
-		<!-- <Faq faqs={faqJasonData}>
-			<span slot="title">FAQ</span>
-			<span slot="sub-title">Frequently asked questions</span>
-		</Faq> -->
 		<Footer/>
 	</main>
 </Layout>
