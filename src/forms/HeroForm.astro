@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
-import MobileHeroBg from "../images/fei-hero-banner.png";
+// import MobileHeroBg from "../images/fei-hero-banner.png";
 import { FormButton } from "../components/ui/buttons/FormButton";
 import { Input } from "../components/ui/Input";
 ---
 
-<form method="POST" id="hero-form" class="relative mt-4">
+<form method="POST" id="hero-form" class="relative md:mt-4">
   <div class="form-hide">
-    <Image src={MobileHeroBg} alt="Fei Chen" class="absolute sm:hidden bottom-[55%] left-[52%] sm:left-[65%] md:left-[61%] md:left-auto md:right-0 w-4/5 sm:w-1/2" />
+    <!-- <Image src={MobileHeroBg} alt="Fei Chen" class="absolute sm:hidden bottom-[55%] left-[52%] sm:left-[65%] md:left-[61%] md:left-auto md:right-0 w-4/5 sm:w-1/2" /> -->
 
     <div class="flex flex-col gap-3 flex flex-col lg:flex-row lg:gap-0">
       <div class="lg:w-[250px] xl:w-[280px] relative">
@@ -21,7 +21,7 @@ import { Input } from "../components/ui/Input";
     </div>
   </div>
 
-  <div id="form-part-2" style="display: none;" class="-mt-16 md:-mt-0">
+  <div id="form-part-2" style="display: none;" class="mt-16 md:-mt-0">
     <h1 class="text-3xl lg:text-4xl lg:text-center my-6 max-w-[600px] text-white">Please enter your details.</h1>
 
     <div class="grid grid-cols-2 gap-3 max-w-[600px]">
