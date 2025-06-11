@@ -10,8 +10,10 @@ export interface Props {
 const { className } = Astro.props;
 ---
 <div class=`lang-dropdown relative ml-[1rem] ${className}`>
-    <span class="block lang-btn cursor-pointer transition-all hover:bg-white-peral hover:text-cta-red">{(currentLang === 'zh')?'中文':currentLang.toUpperCase()}<i class="fa-solid fa-chevron-down ml-1"></i></span>
-    <ul class="hidden lang-list">
+    <span class="block lang-btn cursor-pointer transition-all hover:bg-white-peral hover:text-cta-red">{(currentLang === 'zh')?'中文':currentLang.toUpperCase()}
+        <!-- <i class="fa-solid fa-chevron-down ml-1"></i> -->
+    </span>
+    <!-- <ul class="hidden lang-list">
         {languages.filter(lang => lang !== currentLang).map(lang => (
             <li class="">
                 <a href={`/${lang}${path}`}>
@@ -19,7 +21,7 @@ const { className } = Astro.props;
                 </a>
             </li>
         ))}
-    </ul>
+    </ul> -->
 </div>
 
 <style lang="scss">

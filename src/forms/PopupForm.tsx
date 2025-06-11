@@ -3,7 +3,7 @@ import React from "react";
 import { FormButton } from "../components/ui/buttons/FormButton";
 import { Input } from "../components/ui/Input";
 import { submitToHs } from "./submitToHs_no_booking";
-// import CtaButton from '../components/ui/buttons/CtaButton.astro';
+import { CtaButton } from '../components/ui/buttons/CtaButton';
 
 interface PopupFormProps {
   children?: React.ReactNode;
@@ -13,14 +13,16 @@ const PopupForm = ({ children }: PopupFormProps) => {
   const [formShow, setFormOpen] = React.useState(false);
 
   return (
-    <div className="mt-4 relative w-fit">
-      <button
+    <div className="inline-block mt-4 relative w-fit">
+      <CtaButton
         onClick={() => {
           setFormOpen(!formShow);
         }}
+        
+        hasArrow={true}
       >
-        Get 2 free months seo
-      </button>
+        {children ?? "Get 2 free months SEO"}
+      </CtaButton>
 
       {formShow && (
         <>
@@ -32,7 +34,7 @@ const PopupForm = ({ children }: PopupFormProps) => {
           />
           <form
             id="popup-form"
-            className="absolute mt-4 bg-blue-500 p-4 rounded-lg w-full min-w-[300px] md:min-w-[400px] shadow-2xl z-50"
+            className="absolute mt-4 bg-white p-4 rounded-lg w-full min-w-[300px] md:min-w-[400px] shadow-2xl z-50"
             onSubmit={async (e) => {
               e.preventDefault();
 
@@ -59,38 +61,38 @@ const PopupForm = ({ children }: PopupFormProps) => {
             }}
           >
             <div className="grid gap-3">
-              <span className="text-white text-2xl font-semibold text-center">
+              <span className="text-black text-2xl font-semibold text-center">
                 Enter your details.
               </span>
               <Input
                 placeholder="First Name*"
                 name="firstName"
                 required
-                className="lg:w-full"
+                className="lg:w-full border border-gray-light border-solid"
               />
               <Input
                 placeholder="Phone*"
                 name="phone"
                 required
-                className="lg:w-full"
+                className="lg:w-full border border-gray-light border-solid"
                 type="tel"
               />
               <Input
                 placeholder="Email*"
                 name="email"
                 required
-                className="lg:w-full"
+                className="lg:w-full border border-gray-light border-solid"
                 type="email"
               />
               <Input
                 placeholder="Website"
                 name="website"
-                className="lg:w-full"
+                className="lg:w-full border border-gray-light border-solid"
                 type="website"
               />
-              <button type="submit" className="popup-form-button lg:w-full">
-                Get 2 free months seo
-              </button>
+              <CtaButton>
+                 Submit
+              </CtaButton>
             </div>
           </form>
         </>

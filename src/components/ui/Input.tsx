@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = ({ className, ...props }) => {
     <input
       {...props}
       className={clsx(
-        "rounded-[0.375rem] font-semibold bg-white text-gray-900 w-full color-gray-600 lg:w-fit px-4 py-5 shadow-lg",
+        "rounded-[0.375rem] font-semibold bg-white text-gray-900 w-full color-gray-600 lg:w-fit px-4 py-5",
         className
       )}
     />

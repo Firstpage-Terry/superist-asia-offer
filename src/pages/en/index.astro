@@ -15,7 +15,7 @@ import HeroForm from "../../forms/HeroForm.astro";
 import { PopupForm } from "../../forms/PopupForm";
 
 // Buttons
-import CtaButton from '../../components/ui/buttons/CtaButton.astro';
+import { CtaButton } from '../../components/ui/buttons/CtaButton';
 
 // Images
 import heroBg from "../../images/home-hero-bg.jpg";
@@ -72,7 +72,7 @@ import iPad from "../../images/ipad-sentr.png";
 							<h2 class="mb-4">Get more leads and sales than you can handle with SEO services.</h2>
 							<div class="para font-[300] mb-5">
 								<p>Why wait a year for results when you can experience jaw-dropping growth within 90 days? With our unique, high-octane strategies, you’ll watch your revenue and traffic soar while the competition is still warming up.</p>
-                                <CtaButton>Get 2 free months seo</CtaButton>
+                                <PopupForm client:only="react"/>
 							</div>
 						</div>
 					</div>
@@ -119,7 +119,7 @@ import iPad from "../../images/ipad-sentr.png";
                     </div>
 					<p class="mb-4 leading-[22.4px]">Once you talk to one of the Superist guys you immediately feel the energetic, creative, fresh spirt. The first meetings were with Tony, who exactly understood our vision of our social media idea and he added value input, resulting in a clear strategy. In parallel, we evaluated two other marketing agencies, however we made our decisions towards Superist due to fact that they gave the best input, ideas and hints.</p>
 					<p class="mb-6 w-full"><strong>Ulrich Dosch</strong></p>
-					<CtaButton>Get 2 free months seo</CtaButton>
+					<PopupForm client:only="react"/>
 				</div>
 			</div>
 		</section>
@@ -162,7 +162,7 @@ import iPad from "../../images/ipad-sentr.png";
 						<div class="px-[1rem] py-[3rem] sm:px-[3rem]">
 							<h2 class="mb-4">Enquire now for 2 free months of xSEO!</h2>
 							<p class="mb-8 text-white">Double the value, double the growth!</p>
-							<CtaButton>Get 2 free months seo</CtaButton>
+							<PopupForm client:only="react"/>
 						</div>
 					</div>
 					<div class="sm:w-1/2 overflow-hidden">
