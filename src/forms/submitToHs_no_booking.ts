@@ -1,7 +1,7 @@
 const THANK_YOU_PAGE = "https://superist.com/thank-you";
 
 const HS_OFFICE_ID = "3832363";
-const HS_FORM_ID = "7dc8017c-13cc-4303-94ee-24035fca0c76";
+const HS_FORM_ID = "b82b3d1c-efd9-4adb-bdff-9d17c19fc590";
 // const HS_FORM_ID = "673ae825-4851-48c8-b512-724e96af70a8";
 
 async function submitToHs(
