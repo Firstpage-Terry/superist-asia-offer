@@ -45,7 +45,7 @@ const currentLang = Astro.url.pathname.split('/')[1];
                     </div>
                 </div> -->
                 <div class="flex text-[14px] mb-[1rem] whitespace-nowrap">
-                    <i class="fa-solid fa-envelope text-[22px] mr-[10px]"></i> HELLO@SUPERIST.COM
+                    <a href="mailto:hello@superist.com"><i class="fa-solid fa-envelope text-[22px] mr-[10px]"></i> HELLO@SUPERIST.COM</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ const currentLang = Astro.url.pathname.split('/')[1];
             <div class="grid grid-cols-1 md:grid-cols-2 text-center md:text-left place-content-between">
                 <p class="footer-statement text-[14px]">© {new Date().getFullYear()} Superist. All rights reserved</p>
                 {(currentLang === "en")? 
-                    <a class="place-self-center md:place-self-end" href={`/${currentLang}/terms-of-business`}>Terms of Business</a>
+                    <a class="place-self-center md:place-self-end" href="https://superist.com/en/terms-of-business">Terms of Business</a>
                 :''}
             </div>
         </div>

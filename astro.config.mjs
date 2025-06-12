@@ -9,7 +9,7 @@ export default defineConfig({
         locales: ["en", "zh"],
         defaultLocale: "en",
         routing: {
-            prefixDefaultLocale: true
+            // prefixDefaultLocale: true
         }
     },
     integrations: [tailwind(), react()]
